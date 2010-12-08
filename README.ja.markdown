@@ -18,7 +18,7 @@ Lokka Tweet Button
 
     <%= tweet_button("http://example.com/foo/bar/") %>
 
-注意事項
+注意点
 --------
 
 URLが"http://localhost"で始まり、ツイートボタンをクリックすると、Twitterは"URL required - 'url' parameter does not contain a valid URL."というメッセージを表示します。
