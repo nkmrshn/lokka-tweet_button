@@ -14,6 +14,8 @@ Run these commands:
 Usage
 -----
 
+You can set options in the admin page [Plugins]->[Tweet Button].
+
 The helper method is "tweet_button".  Don't forget to modify the theme template. If the tweet_button method called without any parameter, current page URL will be tweeted. If you want to specify the URL, call the method with String parameter like:
 
     <%= tweet_button("http://example.com/foo/bar/") %>
