@@ -7,7 +7,6 @@ module Lokka
 
       app.put '/admin/plugins/tweet_button' do
         params.each_pair do |key, value|
-          p key + ":" + value
           eval("Option.#{key}='#{value}'")
         end
         flash[:notice] = t.tweet_button_updated
