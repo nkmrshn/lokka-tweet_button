@@ -16,7 +16,9 @@ module Lokka
   end
 
   module Helpers
-    def tweet_button(url = request.env['REQUEST_URI'])
+    def tweet_button(url = nil)
+      url = "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}#{request.env['SCRIPT_NAME']}#{request.env['PATH_INFO']}" if url.blank?
+
       count = Option.tweet_button_count
       count = 'vertical' if count.blank?
 
