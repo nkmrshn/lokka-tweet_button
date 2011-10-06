@@ -16,7 +16,7 @@ module Lokka
   end
 
   module Helpers
-    def tweet_button(url = nil)
+    def tweet_button(url = nil, text = nil)
       url = "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}#{request.env['SCRIPT_NAME']}#{request.env['PATH_INFO']}" if url.blank?
 
       count = Option.tweet_button_count
@@ -38,6 +38,7 @@ module Lokka
       opts['data-related'] = related unless related.blank?
       opts['data-lang'] = lang unless lang.blank?
       opts['data-url'] = url unless url.blank?
+      opts['data-text'] = text unless text.blank?
 
       data = []
       opts.each {|opt| data << opt.join('="') + '"'}

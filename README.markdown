@@ -20,6 +20,10 @@ The helper method is "tweet_button".  Don't forget to modify the theme template.
 
     <%= tweet_button("http://example.com/foo/bar/") %>
 
+If you want to specify some text to be tweeted, call the method with 2 parameters like:
+
+    <%= tweet_button("http://example.com/foo/bar/", "some text") %>
+
 Notice
 ------
 
