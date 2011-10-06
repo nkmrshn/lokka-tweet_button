@@ -18,6 +18,10 @@ Lokka Tweet Button
 
     <%= tweet_button("http://example.com/foo/bar/") %>
 
+ツイートしたい文面も指定したい場合は、URLと文面を指定してください。
+
+    <%= tweet_button("http://example.com/foo/bar/", "some text") %>
+
 注意点
 --------
 
